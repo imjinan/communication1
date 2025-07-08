@@ -1,10 +1,23 @@
 public class MainClass {
     public static void main(String[] args) {
-        Communication c1 = new TextMessage();
-        Communication c2 = new PushNotification();
-        Communication c3 = new Email();
-        c1.sendCommunication("text message");
-        c2.sendCommunication("push notification");
-        c3.sendCommunication("email");
+        String input = args[0];
+        Communication c1;
+
+        switch (input) {
+            case "sms":
+                c1 = new TextMessage();
+                break;
+            case "email":
+                c1 = new Email();
+                break;
+            case "push":
+                c1 = new PushNotification();
+                break;
+            default:
+                System.out.println("Sorry invalid type");
+                return;
+        }
+
+        c1.sendCommunication(input);
     }
 }
