@@ -1,8 +1,7 @@
 public class MainClass {
     public static void main(String[] args) {
-        String input = args[0];
+        String input=args[0];
         Communication c1;
-
         switch (input) {
             case "sms":
                 c1 = new TextMessage();
@@ -17,7 +16,6 @@ public class MainClass {
                 System.out.println("Sorry invalid type");
                 return;
         }
-
         c1.sendCommunication(input);
     }
 }
