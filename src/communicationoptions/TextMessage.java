@@ -1,4 +1,4 @@
-package communicationOptions;
+package communicationoptions;
 
 public class TextMessage implements Communication{
 
