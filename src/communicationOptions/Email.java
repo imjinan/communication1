@@ -1,4 +1,4 @@
-package communicationoptions;
+package communicationOptions;
 
 public class Email implements Communication{
 

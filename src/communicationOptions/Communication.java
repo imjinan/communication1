@@ -1,4 +1,4 @@
-package communicationoptions;
+package communicationOptions;
 
 public interface Communication {
         public default void sendCommunication(String message){

@@ -1,4 +1,4 @@
-package communicationoptions;
+package communicationOptions;
 
 public class MainClass {
     public static void main(String[] args) {
