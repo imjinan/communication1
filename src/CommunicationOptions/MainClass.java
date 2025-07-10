@@ -1,8 +1,10 @@
+package CommunicationOptions;
+
 public class MainClass {
     public static void main(String[] args) {
         String input=args[0];
         Communication c1;
-        switch (input) {
+        switch (input.toLowerCase()) {
             case "sms":
                 c1 = new TextMessage();
                 break;
@@ -15,7 +17,9 @@ public class MainClass {
             default:
                 System.out.println("Sorry invalid type");
                 return;
+
         }
+
         c1.sendCommunication(input);
     }
 }
