@@ -7,23 +7,14 @@ public class MainClass {
             return;
         }
         String input=args[0];
-        Communication c1;
-        switch (input.toLowerCase()) {
-            case "sms":
-                c1 = new TextMessage();
-                break;
-            case "email":
-                c1 = new Email();
-                break;
-            case "push":
-                c1 = new PushNotification();
-                break;
-            default:
-                System.out.println("Sorry invalid type");
-                return;
-
+        CommunicationFactory cf = new CommunicationFactory();
+        Communication comm = cf.getCommunication(input);
+        if(comm!=null) {
+            comm.sendCommunication(input);
+        }
+        else{
+            System.out.println("only sms, push and email");
         }
 
-        c1.sendCommunication(input);
     }
 }
